@@ -9,10 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            SplashScreenView()
+        NavigationView {
+            VStack {
+                SplashScreenView()
+            }
+            //.edgesIgnoringSafeArea([.top, .bottom])
+        .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height)
         }
-        .padding()
+        
     }
 }
 

@@ -12,13 +12,16 @@ struct SplashScreenView: View {
     var splashScreens: [SplashScreen] = splashList
     
     var body: some View {
-        TabView{
-            ForEach(splashScreens) { screen in
-                SplashComponent(splash: screen)
-            }//: For Each
-        }//TabView
-        .tabViewStyle(PageTabViewStyle())
-        .padding(.vertical, 20)
+      //  NavigationView {
+            TabView{
+                ForEach(splashScreens) { screen in
+                    SplashComponent(splash: screen)
+                }//: For Each
+            }//TabView
+            .tabViewStyle(PageTabViewStyle())
+        
+       // }
+        
     }
 }
 

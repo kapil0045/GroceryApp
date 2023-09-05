@@ -52,14 +52,19 @@ struct SplashComponent: View {
                 
                 //Button: Start
                 Spacer()
-               
+                NavigationLink{
+                    WelcomeScreenView()
+                } label: {
                     StartButton()
+                }
+                    
            
                 
             }
             .padding(.bottom)
             
         }
+        .frame(maxWidth: UIScreen.main.bounds.width)
         .onAppear{
             withAnimation(.easeOut(duration: 0.5)) {
                       isAnimating = true
