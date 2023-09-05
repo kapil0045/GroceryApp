@@ -15,6 +15,7 @@
 		519AC8992AA4D33B00630628 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AC8982AA4D33B00630628 /* SplashScreenView.swift */; };
 		519AC89B2AA4D35F00630628 /* SplashComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AC89A2AA4D35E00630628 /* SplashComponent.swift */; };
 		519AC89D2AA4D78000630628 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AC89C2AA4D78000630628 /* StartButton.swift */; };
+		51EAD9592AA6C5B80082CAE1 /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EAD9582AA6C5B80082CAE1 /* WelcomeScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		519AC8982AA4D33B00630628 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		519AC89A2AA4D35E00630628 /* SplashComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashComponent.swift; sourceTree = "<group>"; };
 		519AC89C2AA4D78000630628 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		51EAD9582AA6C5B80082CAE1 /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				519AC8982AA4D33B00630628 /* SplashScreenView.swift */,
+				51EAD9582AA6C5B80082CAE1 /* WelcomeScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51EAD9592AA6C5B80082CAE1 /* WelcomeScreenView.swift in Sources */,
 				519AC89D2AA4D78000630628 /* StartButton.swift in Sources */,
 				519AC89B2AA4D35F00630628 /* SplashComponent.swift in Sources */,
 				519AC8972AA4CD0700630628 /* SplashScreen.swift in Sources */,
