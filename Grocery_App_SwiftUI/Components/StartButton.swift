@@ -9,6 +9,8 @@ import SwiftUI
 
 struct StartButton: View {
     
+    @State var selection: Int? = nil
+    
     var deviceWidth: CGFloat {
         UIScreen.main.bounds.width
     }
@@ -18,24 +20,26 @@ struct StartButton: View {
     }
     
     var body: some View {
-       
         
+        NavigationLink(destination: WelcomeScreenView(), tag: 1, selection: $selection) {
         Button {
             print("Get started")
+            self.selection = 1
         } label: {
             Text("Get Started")
                 .foregroundColor(Color.white)
                 .padding(.horizontal, 100)
                 .padding(.vertical, 10)
                 .background(Color("primary"))
-                
+            
         }
         .frame(maxWidth: deviceWidth)
-        
+    }
+        }
         
 
     }
-}
+
 
 struct StartButton_Previews: PreviewProvider {
     static var previews: some View {
