@@ -12,7 +12,7 @@ struct SplashScreenView: View {
     var splashScreens: [SplashScreen] = splashList
     
     var body: some View {
-      //  NavigationView {
+        NavigationView {
             TabView{
                 ForEach(splashScreens) { screen in
                     SplashComponent(splash: screen)
@@ -20,7 +20,7 @@ struct SplashScreenView: View {
             }//TabView
             .tabViewStyle(PageTabViewStyle())
         
-       // }
+        }
         
     }
 }

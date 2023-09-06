@@ -26,9 +26,10 @@ struct SplashComponent: View {
             VStack(alignment: .center, spacing: 20) {
                 //Title
                 Text("\(splash.title)")
-                    .font(.system(size: 20))
-                    //.font(.headline)
+                    .font(.system(size: 30))
+                    .font(.headline)
                 .fontWeight(.bold)
+//                .padding([.leading, .trailing], 50)
                 
                 //Logo if required
                 if splash.logoImage.isEmpty {
@@ -38,7 +39,7 @@ struct SplashComponent: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 150)
-                        .background(.white)
+                        
                 }
                
                 
@@ -48,20 +49,23 @@ struct SplashComponent: View {
                     .multilineTextAlignment(.center)
                     .lineLimit(2)
                     .frame(width: 300)
-                    .background(.white)
                 
                 //Button: Start
                 Spacer()
-                NavigationLink{
-                    WelcomeScreenView()
-                } label: {
+//                NavigationLink{
+//                    WelcomeScreenView()
+//                } label: {
+//                    StartButton()
+//                }
+                NavigationLink(destination: WelcomeScreenView()){
                     StartButton()
+                    
                 }
                     
            
                 
             }
-            .padding(.bottom)
+            .padding([.top, .bottom], 50)
             
         }
         .frame(maxWidth: UIScreen.main.bounds.width)

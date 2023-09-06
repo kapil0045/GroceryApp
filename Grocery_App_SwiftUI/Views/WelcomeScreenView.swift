@@ -30,7 +30,7 @@ struct WelcomeScreenView: View {
                 Button {
                     print("Welcome to google")
                 } label: {
-                    HStack(alignment: .firstTextBaseline, spacing: 50){
+                    HStack(spacing: 50){
                         Image("Group 4")
                             .resizable()
                             .frame(width: 20, height: 20)
@@ -48,18 +48,19 @@ struct WelcomeScreenView: View {
                 Button {
                     print("Create an account")
                 } label: {
-                    HStack(alignment: .firstTextBaseline, spacing: 50){
+                    HStack(spacing: 50){
                         Image("userIcon")
                             .resizable()
                             .frame(width: 20, height: 20)
                         Text("Create an account")
-                            .foregroundColor(Color.black)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
                     }
                     
                 }
                 .padding()
                 .frame(width: UIScreen.main.bounds.width - 30)
-                .background(Color("primary"))
+                .background(Color("primary-Dark"))
                 .cornerRadius(10)
                 
                     HStack{

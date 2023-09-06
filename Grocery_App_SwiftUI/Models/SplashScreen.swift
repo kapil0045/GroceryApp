@@ -16,7 +16,7 @@ struct SplashScreen: Identifiable{
     var image: String
 }
 
-var splashList = [SplashScreen(title: "Welcome To", headline: "Lorem ipsum dolor sit amet conseteur elitr, sed diam nonumy", logoImage: "bigCart1", image: "png-clipart-grocery-store-shopping-cart-shopping-cart-child-food"),
-                  SplashScreen(title: "Buy Quality Dairy Products", headline: "Lorem ipsum dolor sit amet conseteur elitr, sed diam nonumy", logoImage: "", image: "png-clipart-grocery-store-shopping-cart-shopping-cart-child-food"),
-                  SplashScreen(title: "Buy premium Quality Fruits", headline: "Lorem ipsum dolor sit amet conseteur elitr, sed diam nonumy", logoImage: "", image: "fruits-7357732_960_720"),
-                  SplashScreen(title: "Get Discount On All Products", headline: "Lorem ipsum dolor sit amet conseteur elitr, sed diam nonumy", logoImage: "", image: "istockphoto-593301222-612x612")]
+var splashList = [SplashScreen(title: "Welcome To", headline: "Lorem ipsum dolor sit amet conseteur elitr, sed diam nonumy", logoImage: "bigCart1", image: "defaultSplash1BgImg"),
+                  SplashScreen(title: "Buy Quality Dairy Products", headline: "Lorem ipsum dolor sit amet conseteur elitr, sed diam nonumy", logoImage: "", image: "defaultSplash2BgImg"),
+                  SplashScreen(title: "Buy premium Quality Fruits", headline: "Lorem ipsum dolor sit amet conseteur elitr, sed diam nonumy", logoImage: "", image: "defaultSplash3BgImg"),
+                  SplashScreen(title: "Get Discount On All Products", headline: "Lorem ipsum dolor sit amet conseteur elitr, sed diam nonumy", logoImage: "", image: "defaultSplash4BgImg")]
