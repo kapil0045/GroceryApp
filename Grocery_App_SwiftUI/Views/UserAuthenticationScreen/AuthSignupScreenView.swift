@@ -1,21 +1,21 @@
 //
-//  AuthLoginScreenView.swift
+//  AuthSignupScreenView.swift
 //  Grocery_App_SwiftUI
 //
-//  Created by DigitalFlake Kapil Dongre on 05/09/23.
+//  Created by DigitalFlake Kapil Dongre on 06/09/23.
 //
 
 import SwiftUI
 
-struct AuthLoginScreenView: View {
+struct AuthSignupScreenView: View {
     
     @State var topLeft: CGFloat = 10
     @State var topRight: CGFloat = 10
-    @State private var rememberMe = true
+    @State var selection: Int? = nil
     
     var body: some View {
         VStack {
-            Image("Auth1LoginImg")
+            Image("AuthSignImg")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height / 2.5)
@@ -38,6 +38,18 @@ struct AuthLoginScreenView: View {
                     .background(.white)
                     .cornerRadius(10)
                     
+                    HStack {
+                        Image("telephone_1")
+                            .resizable()
+                            .frame(width: 25, height: 20)
+                        TextField("", text: .constant("Phone Number")).foregroundColor(Color.gray)
+                            .font(.system(size: 16))
+                    }
+                    .padding()
+                    .background(.white)
+                    .cornerRadius(10)
+                    
+                    
                     
                     HStack {
                         Image("passwordLock")
@@ -54,48 +66,33 @@ struct AuthLoginScreenView: View {
                     .background(.white)
                     .cornerRadius(10)
                     //.overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2).foregroundColor(Color.black))
-                    HStack(spacing: 20){
-                        HStack{
-                            Toggle("", isOn: $rememberMe)
-                                .labelsHidden()
-                            
-                            
-                            Text("Remember Me")
-                                .foregroundColor(Color.gray)
-                                .font(.system(size: 16))
-                            
-                        }
-                        
-                        Text("Forgot Password")
-                            .foregroundColor(Color.blue)
-                            .font(.system(size: 16))
-                        
-                    }
-                    
                     Button {
                         print("Create an account")
                     } label: {
-
-                            Text("Login")
-                                .fontWeight(.bold)
-                                .foregroundColor(Color.white)
-
+                        
+                        Text("Signup")
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                        
                     }
                     .padding()
                     .frame(width: UIScreen.main.bounds.width - 30)
                     .background(Color("primary-Dark"))
                     .cornerRadius(10)
-
                     
+                    
+                    NavigationLink(destination: AuthLoginScreenView(), tag: 2, selection: $selection) {
                     HStack{
-                        Text("Don't have an account?")
+                        Text("Already have an account?")
                             .foregroundColor(Color.gray)
-                        Text("Signup")
+                        Text("Login")
                             .foregroundColor(Color.black)
                     }
                     .onTapGesture {
-                        print("Sign up")
+                        print("Login")
+                        self.selection = 2
                     }
+                }
                 }
                 Spacer()
             }
@@ -106,12 +103,11 @@ struct AuthLoginScreenView: View {
             .cornerRadius(topLeft, corners: .topLeft)
             .cornerRadius(topRight, corners: .topRight)
         }
-        
     }
 }
 
-struct AuthLoginScreenView_Previews: PreviewProvider {
+struct AuthSignupScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthLoginScreenView()
+        AuthSignupScreenView()
     }
 }

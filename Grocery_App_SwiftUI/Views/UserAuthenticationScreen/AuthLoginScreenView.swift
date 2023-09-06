@@ -1,18 +1,22 @@
 //
-//  AuthSignupScreenView.swift
+//  AuthLoginScreenView.swift
 //  Grocery_App_SwiftUI
 //
-//  Created by DigitalFlake Kapil Dongre on 06/09/23.
+//  Created by DigitalFlake Kapil Dongre on 05/09/23.
 //
 
 import SwiftUI
 
-struct AuthSignupScreenView: View {
+struct AuthLoginScreenView: View {
+    
     @State var topLeft: CGFloat = 10
     @State var topRight: CGFloat = 10
+    @State private var rememberMe = true
+    @State var selection: Int? = nil
+    
     var body: some View {
         VStack {
-            Image("AuthSignImg")
+            Image("Auth1LoginImg")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height / 2.5)
@@ -35,18 +39,6 @@ struct AuthSignupScreenView: View {
                     .background(.white)
                     .cornerRadius(10)
                     
-                    HStack {
-                        Image("telephone_1")
-                            .resizable()
-                            .frame(width: 25, height: 20)
-                        TextField("", text: .constant("Phone Number")).foregroundColor(Color.gray)
-                            .font(.system(size: 16))
-                    }
-                    .padding()
-                    .background(.white)
-                    .cornerRadius(10)
-
-                    
                     
                     HStack {
                         Image("passwordLock")
@@ -63,11 +55,34 @@ struct AuthSignupScreenView: View {
                     .background(.white)
                     .cornerRadius(10)
                     //.overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2).foregroundColor(Color.black))
+                    HStack(spacing: 20){
+                        HStack{
+                            Toggle("", isOn: $rememberMe)
+                                .labelsHidden()
+                            
+                            
+                            Text("Remember Me")
+                                .foregroundColor(Color.gray)
+                                .font(.system(size: 16))
+                            
+                        }
+                        
+                        NavigationLink(destination: ForgotPasswordScreenView(), tag: 1, selection: $selection) {
+                            Text("Forgot Password")
+                                .foregroundColor(Color.blue)
+                                .font(.system(size: 16))
+                            
+                        }
+                        .onTapGesture {
+                            self.selection = 1
+                        }
+                    }
+                    
                     Button {
                         print("Create an account")
                     } label: {
 
-                            Text("Signup")
+                            Text("Login")
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.white)
 
@@ -76,15 +91,18 @@ struct AuthSignupScreenView: View {
                     .frame(width: UIScreen.main.bounds.width - 30)
                     .background(Color("primary-Dark"))
                     .cornerRadius(10)
-                    
-                    HStack{
-                        Text("Don't have an account?")
-                            .foregroundColor(Color.gray)
-                        Text("Signup")
-                            .foregroundColor(Color.black)
-                    }
-                    .onTapGesture {
-                        print("Sign up")
+
+                    NavigationLink(destination: AuthSignupScreenView(), tag: 2, selection: $selection) {
+                        HStack{
+                            Text("Don't have an account?")
+                                .foregroundColor(Color.gray)
+                            Text("Signup")
+                                .foregroundColor(Color.black)
+                        }
+                        .onTapGesture {
+                            print("Sign up")
+                            self.selection = 2
+                        }
                     }
                 }
                 Spacer()
@@ -96,11 +114,12 @@ struct AuthSignupScreenView: View {
             .cornerRadius(topLeft, corners: .topLeft)
             .cornerRadius(topRight, corners: .topRight)
         }
+        
     }
 }
 
-struct AuthSignupScreenView_Previews: PreviewProvider {
+struct AuthLoginScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthSignupScreenView()
+        AuthLoginScreenView()
     }
 }
