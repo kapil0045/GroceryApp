@@ -1,13 +1,17 @@
 //
-//  ForgotPasswordScreenView.swift
+//  VerifyNumberScreen.swift
 //  Grocery_App_SwiftUI
 //
-//  Created by DigitalFlake Kapil Dongre on 06/09/23.
+//  Created by DigitalFlake Kapil Dongre on 16/09/23.
 //
 
 import SwiftUI
 
-struct ForgotPasswordScreenView: View {
+struct VerifyNumberScreen: View {
+    
+    var countryFlag: CountryCodes
+    
+    @State var doIWantThisViewToShow: Bool = false
     
     var deviceWidth: CGFloat {
         UIScreen.main.bounds.width
@@ -21,7 +25,7 @@ struct ForgotPasswordScreenView: View {
         VStack {
             VStack(alignment: .center, spacing: 30){
                 
-                 Text("Forgot Password")
+                 Text("Verify your number")
                     .font(.title)
                     .fontWeight(.semibold)
                 
@@ -32,21 +36,41 @@ struct ForgotPasswordScreenView: View {
                 
                 VStack(alignment: .center, spacing: 15){
                 HStack {
-                    Image("email")
-                        .resizable()
-                        .frame(width: 25, height: 20)
-                    TextField("", text: .constant("Email Address")).foregroundColor(Color.gray)
+                    ZStack{
+                        Button{
+                            print("country code selection pressed")
+                            doIWantThisViewToShow.toggle()
+                        } label: {
+                            Image(countryFlag.countryFlag)
+                            
+                            Text(countryFlag.countryCode)
+                                .foregroundColor(.black)
+                            
+                            Image("downTriangle")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                        }
+                        
+                    }
+                    
+                   
+                    
+                    Text(" ")
+                        .frame(width: 1, height: 60)
+                        .background(.gray)
+                    
+                    TextField("", text: .constant("Your Mobile Number")).foregroundColor(Color.gray)
                         .font(.system(size: 16))
                 }
-                .padding()
+                .padding(.horizontal)
                 .background(.white)
                 .cornerRadius(10)
                 .frame(width: deviceWidth - 25)
                 
                 Button{
-                    print("send link btn pressed")
+                    print("next btn pressed")
                 } label: {
-                    Text("Send Link")
+                    Text("Next")
                         .foregroundColor(Color.white)
 
                         .padding(.vertical, 20)
@@ -55,6 +79,9 @@ struct ForgotPasswordScreenView: View {
                 .frame(width: deviceWidth - 25)
                 .background(Color("primary"))
                 .cornerRadius(10)
+                    
+                    Text("Resend confirmation code (1:23)")
+                        .foregroundColor(Color(hue: 1.0, saturation: 0.054, brightness: 0.35))
             }
                 
                 
@@ -69,8 +96,8 @@ struct ForgotPasswordScreenView: View {
     }
 }
 
-struct ForgotPasswordScreenView_Previews: PreviewProvider {
+struct VerifyNumberScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ForgotPasswordScreenView()
+        VerifyNumberScreen(countryFlag: countryCodeList[0])
     }
 }
