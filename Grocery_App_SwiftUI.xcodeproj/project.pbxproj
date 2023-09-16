@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		513A9B212AB5FED500FE654A /* VerifyNumberScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513A9B202AB5FED500FE654A /* VerifyNumberScreen.swift */; };
+		513A9B232AB5FF7A00FE654A /* CountryCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513A9B222AB5FF7A00FE654A /* CountryCodes.swift */; };
 		519AC8862AA4C9BA00630628 /* Grocery_App_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AC8852AA4C9BA00630628 /* Grocery_App_SwiftUIApp.swift */; };
 		519AC8882AA4C9BA00630628 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AC8872AA4C9BA00630628 /* ContentView.swift */; };
 		519AC88A2AA4C9C100630628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519AC8892AA4C9C100630628 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		513A9B202AB5FED500FE654A /* VerifyNumberScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyNumberScreen.swift; sourceTree = "<group>"; };
+		513A9B222AB5FF7A00FE654A /* CountryCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodes.swift; sourceTree = "<group>"; };
 		519AC8822AA4C9BA00630628 /* Grocery_App_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocery_App_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		519AC8852AA4C9BA00630628 /* Grocery_App_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grocery_App_SwiftUIApp.swift; sourceTree = "<group>"; };
 		519AC8872AA4C9BA00630628 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				519AC8962AA4CD0700630628 /* SplashScreen.swift */,
+				513A9B222AB5FF7A00FE654A /* CountryCodes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				51EAD9592AA6C5B80082CAE1 /* WelcomeScreenView.swift in Sources */,
 				51AE80932AA85C25008C0A8F /* AuthSignupScreenView.swift in Sources */,
 				519AC89D2AA4D78000630628 /* StartButton.swift in Sources */,
+				513A9B232AB5FF7A00FE654A /* CountryCodes.swift in Sources */,
 				519CCCE52AA8FA7F002CBE09 /* ForgotPasswordScreenView.swift in Sources */,
 				513A9B212AB5FED500FE654A /* VerifyNumberScreen.swift in Sources */,
 				519AC89B2AA4D35F00630628 /* SplashComponent.swift in Sources */,
