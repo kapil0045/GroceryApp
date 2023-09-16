@@ -15,7 +15,11 @@
 		519AC8992AA4D33B00630628 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AC8982AA4D33B00630628 /* SplashScreenView.swift */; };
 		519AC89B2AA4D35F00630628 /* SplashComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AC89A2AA4D35E00630628 /* SplashComponent.swift */; };
 		519AC89D2AA4D78000630628 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AC89C2AA4D78000630628 /* StartButton.swift */; };
+		519CCCE52AA8FA7F002CBE09 /* ForgotPasswordScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CCCE42AA8FA7F002CBE09 /* ForgotPasswordScreenView.swift */; };
 		51AE80932AA85C25008C0A8F /* AuthSignupScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AE80922AA85C25008C0A8F /* AuthSignupScreenView.swift */; };
+		51CE82282AB5E6560041E653 /* CountryCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE82272AB5E6560041E653 /* CountryCodes.swift */; };
+		51CE822A2AB5E9D00041E653 /* CountryCodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE82292AB5E9CF0041E653 /* CountryCodeComponent.swift */; };
+		51D90D4F2AB5E0F3005C145C /* VerifyNumberScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D90D4E2AB5E0F3005C145C /* VerifyNumberScreen.swift */; };
 		51EAD9592AA6C5B80082CAE1 /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EAD9582AA6C5B80082CAE1 /* WelcomeScreenView.swift */; };
 		51EAD95C2AA734710082CAE1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EAD95B2AA734710082CAE1 /* Extensions.swift */; };
 		51EAD95E2AA74A900082CAE1 /* AuthLoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EAD95D2AA74A900082CAE1 /* AuthLoginScreenView.swift */; };
@@ -31,7 +35,11 @@
 		519AC8982AA4D33B00630628 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		519AC89A2AA4D35E00630628 /* SplashComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashComponent.swift; sourceTree = "<group>"; };
 		519AC89C2AA4D78000630628 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		519CCCE42AA8FA7F002CBE09 /* ForgotPasswordScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordScreenView.swift; sourceTree = "<group>"; };
 		51AE80922AA85C25008C0A8F /* AuthSignupScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignupScreenView.swift; sourceTree = "<group>"; };
+		51CE82272AB5E6560041E653 /* CountryCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodes.swift; sourceTree = "<group>"; };
+		51CE82292AB5E9CF0041E653 /* CountryCodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeComponent.swift; sourceTree = "<group>"; };
+		51D90D4E2AB5E0F3005C145C /* VerifyNumberScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyNumberScreen.swift; sourceTree = "<group>"; };
 		51EAD9582AA6C5B80082CAE1 /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
 		51EAD95B2AA734710082CAE1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		51EAD95D2AA74A900082CAE1 /* AuthLoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLoginScreenView.swift; sourceTree = "<group>"; };
@@ -92,6 +100,7 @@
 			children = (
 				519AC89A2AA4D35E00630628 /* SplashComponent.swift */,
 				519AC89C2AA4D78000630628 /* StartButton.swift */,
+				51CE82292AB5E9CF0041E653 /* CountryCodeComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -99,10 +108,8 @@
 		519AC8942AA4CA0C00630628 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				519AC8982AA4D33B00630628 /* SplashScreenView.swift */,
-				51EAD9582AA6C5B80082CAE1 /* WelcomeScreenView.swift */,
-				51EAD95D2AA74A900082CAE1 /* AuthLoginScreenView.swift */,
-				51AE80922AA85C25008C0A8F /* AuthSignupScreenView.swift */,
+				519CCCE62AA8FB01002CBE09 /* OnboardingScreen */,
+				519CCCE72AA8FB16002CBE09 /* UserAuthenticationScreen */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,9 +117,46 @@
 		519AC8952AA4CCD700630628 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				519AC8962AA4CD0700630628 /* SplashScreen.swift */,
+				51CE82262AB5E63F0041E653 /* CountryCodes */,
+				51CE82252AB5E62B0041E653 /* SplashScreenModel */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		519CCCE62AA8FB01002CBE09 /* OnboardingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				519AC8982AA4D33B00630628 /* SplashScreenView.swift */,
+			);
+			path = OnboardingScreen;
+			sourceTree = "<group>";
+		};
+		519CCCE72AA8FB16002CBE09 /* UserAuthenticationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				51EAD9582AA6C5B80082CAE1 /* WelcomeScreenView.swift */,
+				51EAD95D2AA74A900082CAE1 /* AuthLoginScreenView.swift */,
+				51AE80922AA85C25008C0A8F /* AuthSignupScreenView.swift */,
+				519CCCE42AA8FA7F002CBE09 /* ForgotPasswordScreenView.swift */,
+				51D90D4E2AB5E0F3005C145C /* VerifyNumberScreen.swift */,
+			);
+			path = UserAuthenticationScreen;
+			sourceTree = "<group>";
+		};
+		51CE82252AB5E62B0041E653 /* SplashScreenModel */ = {
+			isa = PBXGroup;
+			children = (
+				519AC8962AA4CD0700630628 /* SplashScreen.swift */,
+			);
+			path = SplashScreenModel;
+			sourceTree = "<group>";
+		};
+		51CE82262AB5E63F0041E653 /* CountryCodes */ = {
+			isa = PBXGroup;
+			children = (
+				51CE82272AB5E6560041E653 /* CountryCodes.swift */,
+			);
+			path = CountryCodes;
 			sourceTree = "<group>";
 		};
 		51EAD95A2AA734570082CAE1 /* Extensions */ = {
@@ -197,6 +241,10 @@
 				51EAD9592AA6C5B80082CAE1 /* WelcomeScreenView.swift in Sources */,
 				51AE80932AA85C25008C0A8F /* AuthSignupScreenView.swift in Sources */,
 				519AC89D2AA4D78000630628 /* StartButton.swift in Sources */,
+				51CE82282AB5E6560041E653 /* CountryCodes.swift in Sources */,
+				519CCCE52AA8FA7F002CBE09 /* ForgotPasswordScreenView.swift in Sources */,
+				51D90D4F2AB5E0F3005C145C /* VerifyNumberScreen.swift in Sources */,
+				51CE822A2AB5E9D00041E653 /* CountryCodeComponent.swift in Sources */,
 				519AC89B2AA4D35F00630628 /* SplashComponent.swift in Sources */,
 				51EAD95C2AA734710082CAE1 /* Extensions.swift in Sources */,
 				519AC8972AA4CD0700630628 /* SplashScreen.swift in Sources */,
