@@ -101,4 +101,7 @@ struct VerifyNumberScreen_Previews: PreviewProvider {
         VerifyNumberScreen(countryFlag: countryCodeList[0])
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> WelcomeScreen

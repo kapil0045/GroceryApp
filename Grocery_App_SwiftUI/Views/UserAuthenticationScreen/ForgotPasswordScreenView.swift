@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ForgotPasswordScreenView: View {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> WelcomeScreen
     var deviceWidth: CGFloat {
         UIScreen.main.bounds.width
     }
